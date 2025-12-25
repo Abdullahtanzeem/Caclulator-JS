@@ -29,6 +29,7 @@ function useOperator(operator){
   const currentValue = Number(calculatorDisplay.textContent);
   if(operatorValue && awaitingNextValue){
     operatorValue = operator;
+      return;
   }
   if(!firstValue){
     firstValue = currentValue;
