@@ -6,6 +6,7 @@ const clearBtn = document.getElementById("clearBtn");
 let firstValue = 0;
 let awaitingNextValue = false;
 let operatorValue = "";
+
 function addNumberValue(number) {
   if (awaitingNextValue) {
     calculatorDisplay.textContent = number;
