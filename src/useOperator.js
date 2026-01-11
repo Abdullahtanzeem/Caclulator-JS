@@ -1,5 +1,5 @@
 import { calculatorDisplay } from "./selectors.js";
-import { getFirstValue, getAwaitingNextValue, getOperatorValue, setFirstvalue, setAwaitingNextValue, setOperatorValue } from "./values.js";
+import { getFirstValue, getAwaitingNextValue, getOperatorValue, setFirstValue, setAwaitingNextValue, setOperatorValue } from "./values.js";
 import calculate from "./calculate.js";
 
 function useOperator(operator){
@@ -9,11 +9,11 @@ function useOperator(operator){
       return;
   }
   if(!getFirstValue()){
-    setFirstvalue(currentValue);
+    setFirstValue(currentValue);
   }else{
     const calculation = calculate[getOperatorValue()](getFirstValue(), currentValue);
     calculatorDisplay.textContent = calculation;
-    setFirstvalue(calculation);
+    setFirstValue(calculation);
   }
   setAwaitingNextValue(true);
   setOperatorValue(operator);

@@ -1,4 +1,4 @@
-import { getAwaitingNextValue } from "./values";
+import { getAwaitingNextValue } from "./values.js";
 import { calculatorDisplay } from "./selectors.js";
 
 function addDecimal(){
